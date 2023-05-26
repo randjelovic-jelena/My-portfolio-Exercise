@@ -1,0 +1,133 @@
+/*Roboto Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+:root{
+  
+  /*colors*/
+  --col-white:rgba(255,255,255,1); 
+  --col-background:#DBE3F6;
+  --col-light-blue:#5786F5;
+  --col-dark-blue: #203580;
+
+  /*size*/
+  --h1-size:36px;
+
+}
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  background: var(--col-background);
+  padding: 2rem;
+  width: 100%;
+  min-height: 100vh;
+}
+.grid{
+  --columns:200px 200px;
+}
+a {
+  text-decoration: none;
+  font-size: 28px;
+}
+p {
+  text-align: center;
+  font-size: 18px;
+}
+h1 {
+  text-align: center;
+  font-size: var(--h1-size);
+}
+h1, p {
+  color: var(--col-dark-blue);
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+/*----------------------------
+------------HEADER------------
+-----------------------------*/
+/*NAVIGATION*/
+#navbar {
+  padding: 20px 0;
+  font-size: 24px;
+}
+#navbar > ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+#navbar a {
+  color: var(--col-dark-blue);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/*----------------------------
+-------------MAIN-------------
+-----------------------------*/
+/*MAIN HEADER*/
+.main-heading{
+  font-weight: 400;
+  margin-block: 2rem;
+}
+/*PORTFOLIO-GRID*/
+.grid {
+  display: grid;
+  grid-template-columns: var(--columns);
+  grid-auto-rows: 140px;
+  grid-gap: 20px;
+  justify-content: center;
+}
+.item {
+  background: var(--col-white);
+  border-radius: 10px;
+  box-shadow: 4px 4px 12px #858CAF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.item h1{
+  font-weight: 300;
+  --h1-size:2rem;
+}
+button {
+  margin: 0px auto;
+  display: block;
+  padding: 5px 10px;
+  border: none;
+  background: var(--col-light-blue);
+  color: var(--col-white);
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/*----------------------------
+------------FOOTER------------
+-----------------------------*/
+footer {
+  position: absolute;
+  bottom: 23px;
+  width: 100%;
+  left: 0;
+}
+footer > p {
+  font-size: 12px;
+}
+
+/*----------------------------
+-------------MEDIA------------
+-----------------------------*/
+@media all and (max-width:500px) {
+  .grid{
+    --columns:1fr;
+    margin-bottom: 3rem;
+  }
+  footer{
+    position: unset;
+  }
+}
